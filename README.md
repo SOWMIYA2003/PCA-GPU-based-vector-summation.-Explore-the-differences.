@@ -492,6 +492,22 @@ int main(int argc, char **argv)
 ## Output:
 ### block.x = 1023
 ![a1023co1](https://user-images.githubusercontent.com/93427443/234572266-34d88e0d-74d0-46f0-86b2-5ad00e8e68ea.jpeg)
+```
+Sum Arrays on Host : 0.034372 sec.
+Sum Arrays on GPU : 0.020783 sec.
+```
+### block.x = 1024
+![a1024co](https://user-images.githubusercontent.com/93427443/234572810-ec414eca-f8bc-44ab-a4ed-c58539fd4306.jpeg)
+```
+Sum Arrays on Host : 0.033561 sec.
+Sum Arrays on GPU : 0.021730 sec.
+```
+### block.x = 256
+![a256co](https://user-images.githubusercontent.com/93427443/234573069-c6560a78-d620-490d-a75e-148d04c17cf6.jpeg)
+```
+Sum Arrays on Host : 0.033183 sec.
+Sum Arrays on GPU : 0.020864 sec.
+```
 
 ## Result:
 (i) The block.x is set as 1023 & 1024 and the elapsed time obtained on Host and GPU is compared. 
