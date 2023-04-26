@@ -490,6 +490,8 @@ int main(int argc, char **argv)
 
 ```
 ## Output:
+### block.x = 1023
+![a1023co1](https://user-images.githubusercontent.com/93427443/234572266-34d88e0d-74d0-46f0-86b2-5ad00e8e68ea.jpeg)
 
 ## Result:
 (i) The block.x is set as 1023 & 1024 and the elapsed time obtained on Host and GPU is compared. 
