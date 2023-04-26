@@ -519,6 +519,7 @@ So even with all their massive parallelism, GPUs are still effectively single-th
 Instead of looping over an expression of 256 array elements,  we create huge registers that are a gang of 256 floating point elements. a CPU would have 256 threads progressing at different rates on each array element. A GPU would force all 256 items to be on the same instruction because it's working on these huge registers. This is a reason why we can't run all CPU algorithms efficiently on a GPU. 
 
 CPU : for each i in [0,256]: c[i] = a[i] * b[i] . Here, Each thread progresses at its own rate.
+
 GPU : float32_times256 c,b,a;  c = b * a; where c=b*a is one instruction, with three huge operands.
 ## Result:
 (i) The block.x is set as 1023 & 1024 and the elapsed time obtained on Host and GPU is compared. 
