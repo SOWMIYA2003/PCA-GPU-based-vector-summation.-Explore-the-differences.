@@ -509,7 +509,7 @@ Sum Arrays on Host : 0.033183 sec.
 Sum Arrays on GPU : 0.020864 sec.
 ```
 #### Host-based array summation vs GPU-based vector summation
-```
+
 GPUs: “SIMD” - “Single-Instruction, Multiple-Data”. A GPU can operate on a hundred or a thousand vertices or pixels at once in parallel, but it has to perform exactly the same calculation on all of them.
 
 Whereas a single CPU core can be described as “SISD” - “Single-Instruction, Single-Data”. With multiple CPU cores, we get “MIMD” -- “Multiple-Instruction, Multiple-Data”, where each instruction sequence can be doing entirely different things to different data. Or in other words, multithreading.
@@ -520,8 +520,6 @@ Instead of looping over an expression of 256 array elements,  we create huge reg
 
 CPU : for each i in [0,256]: c[i] = a[i] * b[i] . Here, Each thread progresses at its own rate.
 GPU : float32_times256 c,b,a;  c = b * a; where c=b*a is one instruction, with three huge operands.
-
-```
 ## Result:
 (i) The block.x is set as 1023 & 1024 and the elapsed time obtained on Host and GPU is compared. 
 
