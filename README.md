@@ -29,7 +29,8 @@ Save and Run the Program.
 ```
 Name : Sowmiya N
 Register No : 212221230106
-#include "../common/common.h"
+
+#include "common.h"
 #include <cuda_runtime.h>
 #include <stdio.h>
 
@@ -183,7 +184,8 @@ int main(int argc, char **argv)
 ```
 Name : Sowmiya N
 Register No : 212221230106
-#include "../common/common.h"
+
+#include "common.h"
 #include <cuda_runtime.h>
 #include <stdio.h>
 
@@ -338,7 +340,8 @@ int main(int argc, char **argv)
 ```
 Name : Sowmiya N
 Register No : 212221230106
-#include "../common/common.h"
+
+#include "common.h"
 #include <cuda_runtime.h>
 #include <stdio.h>
 
@@ -491,18 +494,49 @@ int main(int argc, char **argv)
 ```
 ## Output:
 ### block.x = 1023
-![a1023co1](https://user-images.githubusercontent.com/93427443/234572266-34d88e0d-74d0-46f0-86b2-5ad00e8e68ea.jpeg)
 ```
-Sum Arrays on Host : 0.034372 sec.
-Sum Arrays on GPU : 0.020783 sec.
+(base) student@MidPC:~$ su
+Password: 
+root@MidPC:/home/student# cd Desktop
+root@MidPC:/home/student/Desktop# nvcc first.cu
+root@MidPC:/home/student/Desktop# ./a.out
+./a.out Starting...
+Using Device 0: NVIDIA GeForce GTX 1660 SUPER
+Vector size 134217728
+initialData Time elapsed 3.138552 sec
+sumArraysOnHost Time elapsed 0.475402 sec
+sumArraysOnGPU <<<  131201, 1023  >>>  Time elapsed 0.005549 sec
+Arrays match
 ```
+![WhatsApp Image 2023-05-26 at 8 18 15 AM](https://github.com/SOWMIYA2003/PCA-GPU-based-vector-summation.-Explore-the-differences./assets/93427443/49cd7534-823f-4198-bd0e-cb6aa2d4de15)
 ### block.x = 1024
-![a1024co](https://user-images.githubusercontent.com/93427443/234572810-ec414eca-f8bc-44ab-a4ed-c58539fd4306.jpeg)
 ```
-Sum Arrays on Host : 0.033561 sec.
-Sum Arrays on GPU : 0.021730 sec.
+root@MidPC:/home/student/Desktop# nvcc first.cu
+root@MidPC:/home/student/Desktop# ./a.out
+./a.out Starting...
+Using Device 0: NVIDIA GeForce GTX 1660 SUPER
+Vector size 134217728
+initialData Time elapsed 3.151760 sec
+sumArraysOnHost Time elapsed 0.475017 sec
+sumArraysOnGPU <<<  131072, 1024  >>>  Time elapsed 0.005517 sec
+Arrays match.
 ```
+
+![WhatsApp Image 2023-05-26 at 8 18 15 AM(1)](https://github.com/SOWMIYA2003/PCA-GPU-based-vector-summation.-Explore-the-differences./assets/93427443/af477bbf-7b02-4fcb-a449-ba1312888bb8)
 ### block.x = 256
+```
+root@MidPC:/home/student/Desktop# nvcc first.cu
+root@MidPC:/home/student/Desktop# ./a.out
+./a.out Starting...
+Using Device 0: NVIDIA GeForce GTX 1660 SUPER
+Vector size 16777216
+initialData Time elapsed 0.391801 sec
+sumArraysOnHost Time elapsed 0.058644 sec
+sumArraysOnGPU <<<  65536, 256  >>>  Time elapsed 0.000831 sec
+Arrays match.
+```
+![WhatsApp Image 2023-05-26 at 8 18 14 AM](https://github.com/SOWMIYA2003/PCA-GPU-based-vector-summation.-Explore-the-differences./assets/93427443/e4bea3eb-1d7a-4743-93aa-f222c08f2762)
+
 ![a256co](https://user-images.githubusercontent.com/93427443/234573069-c6560a78-d620-490d-a75e-148d04c17cf6.jpeg)
 ```
 Sum Arrays on Host : 0.033183 sec.
@@ -525,3 +559,4 @@ GPU : float32_times256 c,b,a;  c = b * a; where c=b*a is one instruction, with t
 (i) The block.x is set as 1023 & 1024 and the elapsed time obtained on Host and GPU is compared. 
 
 (ii) The number of threads is set as 256 and the elapsed time on Host and GPU is obtained.
+
