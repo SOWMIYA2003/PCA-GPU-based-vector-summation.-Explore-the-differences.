@@ -508,7 +508,8 @@ sumArraysOnHost Time elapsed 0.475402 sec
 sumArraysOnGPU <<<  131201, 1023  >>>  Time elapsed 0.005549 sec
 Arrays match
 ```
-![WhatsApp Image 2023-05-26 at 8 18 15 AM](https://github.com/SOWMIYA2003/PCA-GPU-based-vector-summation.-Explore-the-differences./assets/93427443/49cd7534-823f-4198-bd0e-cb6aa2d4de15)
+![WhatsApp Image 2023-05-26 at 8 18 14 AM](https://github.com/SOWMIYA2003/PCA-GPU-based-vector-summation.-Explore-the-differences./assets/93427443/e4bea3eb-1d7a-4743-93aa-f222c08f2762)
+
 ```
 Sum Arrays on Host : 0.475402 sec.
 Sum Arrays on GPU : 0.005549 sec.
@@ -543,7 +544,7 @@ sumArraysOnHost Time elapsed 0.058644 sec
 sumArraysOnGPU <<<  65536, 256  >>>  Time elapsed 0.000831 sec
 Arrays match.
 ```
-![WhatsApp Image 2023-05-26 at 8 18 14 AM](https://github.com/SOWMIYA2003/PCA-GPU-based-vector-summation.-Explore-the-differences./assets/93427443/e4bea3eb-1d7a-4743-93aa-f222c08f2762)
+![WhatsApp Image 2023-05-26 at 8 18 15 AM](https://github.com/SOWMIYA2003/PCA-GPU-based-vector-summation.-Explore-the-differences./assets/93427443/49cd7534-823f-4198-bd0e-cb6aa2d4de15)
 ```
 Sum Arrays on Host : 0.058644 sec.
 Sum Arrays on GPU : 0.000831 sec.
